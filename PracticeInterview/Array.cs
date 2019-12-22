@@ -45,10 +45,13 @@ namespace PracticeInterview
             //1. Move all the elements to the right (up) to make room for new value
             //2. Insert the value at given indes
             //3. Increase the currentSize of array
-            
 
-
-
+            for (int i = currentSize; i > index; i--)
+            {
+                data[i] = data[i-1];
+            }
+            data[index] = value;
+            currentSize++;
 
         }
         public virtual void Delete(int index)

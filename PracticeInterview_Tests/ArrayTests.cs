@@ -18,6 +18,7 @@ namespace PracticeInterview.Tests
             strArray.Add("a");
             strArray.Add("b");
             strArray.Add("c");
+            strArray.Add("d");
 
             intArray.Add(1);
             intArray.Add(2);
@@ -39,9 +40,6 @@ namespace PracticeInterview.Tests
         [TestMethod]
         public void Add_String_ShouldAddStringElementIntoArray()
         {
-          
-           
-
             Assert.AreEqual("b", strArray.Get(1));
             Assert.AreEqual("a", strArray.Get(0));
             Assert.AreEqual("c", strArray.Get(2));
@@ -51,8 +49,6 @@ namespace PracticeInterview.Tests
         [TestMethod]
         public void Add_Integer_ShouldAddIntElementIntoArray()
         {   
-           
-
             Assert.AreEqual(1, intArray.Get(0));
             Assert.AreEqual(2, intArray.Get(1));
             Assert.AreEqual(3, intArray.Get(2));
@@ -60,13 +56,22 @@ namespace PracticeInterview.Tests
 
         [TestMethod]
         public void Contains_ShouldReturnTrurOrFalse()
-        {  
-
+        {
             Assert.AreEqual(true, strArray.Contains("a"));
             Assert.AreEqual(false, strArray.Contains("x"));
-           // Assert.AreEqual(true, intArray.Contains(3));
+            Assert.AreEqual(true, intArray.Contains(3));
         }
 
+        [TestMethod]
+        public void Insert_ShouldInsertAtIndex()
+        {
+            strArray.Insert(3, "x");
+            strArray.Insert(1, "y");
+
+            Assert.AreEqual("x", strArray.Get(3));
+            Assert.AreEqual("y", strArray.Get(1));
+            //  Assert.AreEqual("d", strArray.Get(4));
+        }
 
     }
 }
