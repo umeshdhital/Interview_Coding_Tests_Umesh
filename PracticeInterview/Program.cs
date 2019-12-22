@@ -104,27 +104,10 @@ namespace PracticeInterview
             Console.WriteLine($"The roman IX = {ConvertRomanToNumber("IX")}");
             Console.WriteLine($"The roman XII = {ConvertRomanToNumber("XII")}");
 
-           
             #endregion
 
 
-            #region ArrayAlgorithm
-            var resultArr = new DynamicArray(10);
-           
-            resultArr.add("a");
-            resultArr.add("b");
-            resultArr.add("c");
-            resultArr.add("d");
-            resultArr.add("e");
-
-            resultArr.insert(2, "X");
-
-            resultArr.mydelete(2);
-            resultArr.mydelete(0);
-
-
-
-            #endregion
+            
             Console.ReadLine();
 
 
